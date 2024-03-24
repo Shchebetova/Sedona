@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Catalog</title>
+</head>
+
+<body class="page-body">
+  <div class="container">
+    <header class="main-header">
+      <nav class="navigation">
+        <a class="logo" href="index.html" aria-label="Логотип">
+          <img src="img/logo.svg" alt="Логотип 'Седона'">
+        </a>
+        <ul class="menu-list">
+          <li class="menu-item"><a href="index.html">Главная</a></li>
+          <li class="menu-item"><a href="#">О Седоне</a></li>
+          <li class="menu-item"><a>Гостиницы</a></li>
+        </ul>
+        <a class="search" href="#" aria-label="Поиск по сайту"></a>
+        <a class="selected" href="#" aria-label="Избранное"></a>
+        <a class="button choise-button" href="#">Хочу сюда!</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="filter">
+        <h1 class="catalog-header">Гостиницы Седоны</h1>
+        <div class="breadcrumbs">
+          <a class="breadcrumbs-index" href="index.html" aria-label="Главная"></a>
+          <a class="breadcrumbs-hotels">Гостиницы</a>
+        </div>
+
+        <form class="filter-content" method="get">
+          <div class="infrastructure">
+            <h2 class="filter-header">Инфраструктура:</h2>
+            <div>
+              <input class="checkbox" type="checkbox" name="pool" id="pool" value="pool" checked>
+              <label class="checkbox-label" for="pool">Бассейн</label>
+            </div>
+            <div>
+              <input class="checkbox" type="checkbox" name="parking" id="parking" value="parking" checked>
+              <label class="checkbox-label" for="parking">Парковка</label>
+            </div>
+            <div>
+              <input class="checkbox" type="checkbox" name="wi-fi" id="wi-fi" value="wi-fi">
+              <label class="checkbox-label" for="wi-fi">Wi-Fi</label>
+            </div>
+          </div>
+          <div class="housing-type">
+            <h2 class="filter-header">Тип Жилья:</h2>
+            <div>
+              <input type="radio" name="housing-type" id="hotel" value="hotel" checked>
+              <label for="hotel">Гостиница</label>
+            </div>
+            <div>
+              <input type="radio" name="housing-type" id="motel" value="motel">
+              <label for="motel">Мотель</label>
+            </div>
+            <div>
+              <input type="radio" name="housing-type" id="apartments" value="apartments">
+              <label for="apartments">Апартаменты</label>
+            </div>
+          </div>
+          <div class="price">
+            <h2 class="price-header">Стоимость, &#x20bd:</h2>
+            <div class="price-input">
+              <div class="price-min">
+                <input type="number" value="0" name="price-min" id="price-min">
+                <label for="price-min">от</label>
+              </div>
+              <div class="price-max">
+                <input type="number" value="9000" name="price-max" id="price-max">
+                <label for="price-max">до</label>
+              </div>
+            </div>
+
+            <div class="slider">
+              <div class="line"></div>
+              <div class="left-slider"></div>
+              <div class="right-slider"></div>
+            </div>
+          </div>
+          <div class="filter-buttons">
+            <button class="button apply-button" type="submit">Применить</button>
+            <button class="button reset-button" type="reset">Сбросить</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="found-hotels">
+        <h2 class="hotels-header">Гостиницы</h2>
+        <div class="hotels-options">
+          <h2 class="found-amount">Найдено гостиниц: 38</h2>
+          <div class="hotels-selection">
+            <label class="selection" for="selection">Выбрать сортировку</label>
+            <select name="hotels-selection" id="selection">
+              <option value="cheap">Сначала дешевые</option>
+            </select>
+          </div>
+          <div class="views">
+            <button class="view-table" type="button"></button>
+            <button class="view-screen" type="button"></button>
+            <button class="view-list" type="button"></button>
+          </div>
+        </div>
+
+        <ul class="selected-items">
+          <li class="cart">
+            <img src="img/location-1.jpg" alt="Amara Resort & Spa">
+            <h3 class="hotel-name">Amara Resort & Spa</h3>
+            <div class="type-and-price">
+              <p class="hotel-type">Гостиница</p>
+              <p class="hotel-price">От 4000 &#x20bd</p>
+            </div>
+            <div class="cart-buttons">
+              <a class="button more-button" href="#">Подробнее</a>
+              <button class="button select-button" type="button">В избранное</button>
+            </div>
+            <div class="hotel-status">
+              <div class="stars"></div>
+              <p class="rating">Рейтинг: 8,5</p>
+            </div>
+          </li>
+
+          <li class="cart">
+            <img src="img/location-2.jpg" alt="Villas at Poco Diablo">
+            <h3 class="hotel-name">Villas at Poco Diablo</h3>
+            <div class="type-and-price">
+              <p class="hotel-type">Гостиница</p>
+              <p class="hotel-price">От 5000 &#x20bd</p>
+            </div>
+            <div class="cart-buttons">
+              <a class="button more-button" href="#">Подробнее</a>
+              <button class="button select-button selected-button" type="button">В избранном</button>
+            </div>
+            <div class="hotel-status">
+              <div class="stars"></div>
+              <p class="rating">Рейтинг: 9,2</p>
+            </div>
+          </li>
+
+          <li class="cart">
+            <img src="img/location-3.jpg" alt="Desert Quail Inn">
+            <h3 class="hotel-name">Desert Quail Inn</h3>
+            <div class="type-and-price">
+              <p class="hotel-type">Гостиница</p>
+              <p class="hotel-price">От 2500 &#x20bd</p>
+            </div>
+            <div class="cart-buttons">
+              <a class="button more-button" href="#">Подробнее</a>
+              <button class="button select-button" type="button">В избранное</button>
+            </div>
+            <div class="hotel-status">
+              <div class="stars"></div>
+              <p class="rating">Рейтинг: 6,9</p>
+            </div>
+          </li>
+
+          <li class="cart">
+            <img src="img/location-4.jpg" alt="GreenTree Inn">
+            <h3 class="hotel-name">GreenTree Inn</h3>
+            <div class="type-and-price">
+              <p class="hotel-type">Гостиница</p>
+              <p class="hotel-price">От 1500 &#x20bd</p>
+            </div>
+            <div class="cart-buttons">
+              <a class="button more-button" href="#">Подробнее</a>
+              <button class="button select-button" type="button">В избранное</button>
+            </div>
+            <div class="hotel-status">
+              <div class="stars"></div>
+              <p class="rating">Рейтинг: 5,0</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="pagination">
+          <a class="page-number active-page" type="button" disabled>1</a>
+          <a class="page-number" type="button">2</a>
+          <a class="page-number" type="button">3</a>
+          <a class="page-number" type="button">4</a>
+          <a class="page-number middle-pages" type="button">...</a>
+          <a class="page-number" type="button">10</a>
+        </div>
+      </section>
+
+      <section class="subscribtion">
+        <h2 class="subscribtion-header">Подпишись</h2>
+        <p class="maintext">Подпишитесь на рассылку</p>
+        <p class="subtext">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribtion-form" action="#" method="get">
+          <label class="subscribtion-label" for="email">Введите e-mail</label>
+          <input class="subscribtion-input" id="email" type="email" name="email" placeholder="Ваш e-mail">
+          <button class="button subscribtion-button" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a href="https://vk.com/htmlacademy" aria-label="Соц. сеть Вконтакте"></a>
+        </li>
+        <li class="socials-item">
+          <a href="https://t.me/htmlacademy" aria-label="Мессенджер Телеграм"></a>
+        </li>
+        <li class="socials-item">
+          <a href="https://www.youtube.com/user/htmlacademyru" aria-label="Youtube"></a>
+        </li>
+      </ul>
+      <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="email" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
+    </footer>
+
+    <section class="modal">
+      <h2 class="modal-header">Поиск гостиницы в Седоне</h2>
+      <form class="modal-form" action="#" method="get">
+        <div class="entrance">
+          <label class="entrance-label" for="entrance">Дата Заезда:</label>
+          <input class="entrance-input" id="entrance" type="date" name="date of entrance" value="2020-04-27">
+          <p class="entrance-subtext">Мы не можем отправить вас в прошлое.</p>
+        </div>
+        <div class="departure">
+          <label class="departure-label" for="departure">Дата Выезда:</label>
+          <input class="departure-input" id="departure" type="date" name="date of departure" value="2023-09-01">
+          <p class="departure-subtext">На эти даты есть свободные номера. Пока есть.</p>
+        </div>
+        <div class="guests">
+          <div class="adults">
+            <label class="adults-label" for="adults">Взрослые:</label>
+            <div class="amount adults-amount">
+              <button class="button-amount" type="button" aria-label="Минус"></button>
+              <input class="amount-number" type="number" name="adults" id="adults" placeholder="2">
+              <button class="button-amount" type="button" aria-label="Плюс"></button>
+            </div>
+          </div>
+          <div class="kids">
+            <div class="kids-wrapper">
+              <label class="kids-label" for="kids">Дети:</label>
+              <p class="kids-subtext">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.</p>
+            </div>
+            <div class="amount kids-amount">
+              <button class="button-amount" type="button" aria-label="Минус"></button>
+              <input class="amount-number" type="number" name="kids" id="kids" placeholder="2">
+              <button class="button-amount" type="button" aria-label="Плюс"></button>
+            </div>
+          </div>
+        </div>
+        <button class="button button-submit" type="submit">Найти</button>
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>
